@@ -34,6 +34,19 @@ Basically follow the instructions on http://appanalysis.org/download.html, with 
 
 ```
 
+and
+
+```
+repo sync
+```
+```
+repo forall libcore frameworks/native frameworks/opt/telephony system/vold system/core device/samsung/manta device/samsung/tuna \
+       packages/apps/TaintDroidNotify -c 'git fetch github && git checkout github/taintdroid-4.3_r1'
+```
+```
+repo forall dalvik frameworks/base -c 'git fetch github && git checkout github/jangho'
+```
+
 ## What to expect
 
 * All the functionalities of TaintDroid must work correctly
